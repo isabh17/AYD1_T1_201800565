@@ -11,12 +11,12 @@ def agregar_cancion():
     data = request.get_json()
     nombre = data.get('nombre')
     artista = data.get('artista')
-    album = data.get('album')  # Cambiar a 'genero' en el hotfix
+    genero = data.get('genero')  # Cambiar a 'genero' en el hotfix
 
     cancion = {
         'nombre': nombre,
         'artista': artista,
-        'album': album
+        'genero': genero
     }
     canciones.append(cancion)
     return jsonify(cancion), 201
